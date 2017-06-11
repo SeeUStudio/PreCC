@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <context id="MyBatisDemo">
+        <jdbcConnection connectionURL="jdbc:mysql://xx"
+                        driverClass="com.mysql.jdbc.Driver" password="xx" userId="xx"/>
+        <javaModelGenerator targetPackage="com.seeu.user.model" targetProject="src/main/java"/>
+        <!--<sqlMapGenerator targetPackage="com.seeu.logintokeneeudb.mapper" targetProject="src/main/java"/>-->
+        <javaClientGenerator targetPackage="com.seeu.user.dao" targetProject="src/main/java" type="ANNOTATEDMAPPER"/>
+
+
+
+        <table schema="xx" tableName="user" domainObjectName="UserInfo"
+               enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false" selectByExampleQueryId="false">
+            <property name="useActualColumnNames" value="true"/>
+        </table>
+
+    </context>
+</generatorConfiguration>
