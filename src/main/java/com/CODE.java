@@ -11,6 +11,6 @@ public class CODE {
     public static final int FAILURE = 400;                //失败
     public static final int EXCEPTION = 500;              //请求抛出异常
     public static final int NOAUTH = 403;                 //无操作权限
-    public static final int NOUSER = 404;                 //无此账户
-
+    public static final int NOUSER = 404;                //无此账户
+    public static final int BLANK = 204;                 //成功处理了请求，但没有返回任何内容
 }
