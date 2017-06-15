@@ -12,5 +12,6 @@ public class CODE {
     public static final int EXCEPTION = 500;              //请求抛出异常
     public static final int NOAUTH = 403;                 //无操作权限
     public static final int NOUSER = 404;                //无此账户
-    public static final int BLANK = 204;                 //成功处理了请求，但没有返回任何内容
+    public static final int CREATED = 201;                 //请求已经被实现，而且有一个新的资源已经依据请求的需要而创建
+    public static final int ACCEPTED = 202;               //服务器已接受请求，但尚未处理
 }
