@@ -4,7 +4,6 @@ import com.CODE;
 import com.TurnBackUtil;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.seeu.coursesystem.service.CourseService;
 import com.seeu.user.dao.*;
 import com.seeu.user.model.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,17 +20,52 @@ import java.util.regex.Pattern;
 @RestController
 public class CourseController {
     @Autowired
-    CourseService courseService;
-    @Autowired
     TurnBackUtil turnBackUtil;
-    @Autowired
-    CourseMapper courseMapper;
-    @Autowired
-    UserMapper userMapper;
+
+    GeneralCourse c1 = new GeneralCourse("123", "CS101", "3-1-2",
+            "LAOLUO", "LIYUAN", 100, 120,1,
+            "1,3,5,7,9" , "4-1-2", "",3);
+    GeneralCourse c2 = new GeneralCourse("124", "CS102", "3-3-4",
+            "wangqi", "LIYUAN", 100, 120,2,
+            "1,3,5,7,9" , "4-3-4","",2);
+    GeneralCourse c3 = new GeneralCourse("125", "CS104", "5-1-2",
+            "LAOLUO", "LIYUAN", 100, 120,3,
+            "1,3,5,7,9" , "1-1-2", "",2);
+    GeneralCourse c4 = new GeneralCourse("126", "CS201", "5-1-2",
+            "LAOLUO", "LIYUAN", 100, 120,4,
+            "1,3,5,7,9" , "1-1-2","",3);
+    GeneralCourse c5 = new GeneralCourse("202", "CS202", "5-1-2",
+            "LAOLUO", "LIYUAN", 100, 120,5,
+            "2,4,6,8,10" , "1-1-2", "",4);
+    GeneralCourse c6 = new GeneralCourse("203", "CS203", "3-3-4",
+            "LAOLUO", "LIYUAN", 100, 120,6,
+            "2,4,6,8,10" , "4-3-4", "",3);
+    GeneralCourse c7 = new GeneralCourse("204", "CS204", "3-3-4",
+            "LAOLUO", "LIYUAN", 100, 120,7,
+            "2,4,6,8,10,12,14" , "4-3-4", "",4);
+    GeneralCourse c8 = new GeneralCourse("205", "CS205", "2-5-6",
+            "LAOLUO", "LIYUAN", 100, 120,7,
+            "1,3,5,7,9" , "1-5-6", "",3);
+    GeneralCourse c9 = new GeneralCourse("206", "CS206", "5-1-2",
+            "LAOLUO", "LIYUAN", 100, 120,7,
+            "1,3,5,7,9" , "1-5-6", "",3);
+    GeneralCourse c10 = new GeneralCourse("301", "CS301", "5-1-2",
+            "LAOLUO", "LIYUAN", 100, 120,7,
+            "1,3,5,7,9,11" , "1-7-8", "",3);
+    String s1 = JSON.toJSONString(c1);
+    String s2 = JSON.toJSONString(c2);
+    String s3 = JSON.toJSONString(c3);
+    String s4 = JSON.toJSONString(c4);
+    String s5 = JSON.toJSONString(c5);
+    String s6 = JSON.toJSONString(c6);
+    String s7 = JSON.toJSONString(c7);
+    String s8 = JSON.toJSONString(c8);
+    String s9 = JSON.toJSONString(c9);
+    String s10 = JSON.toJSONString(c10);
 
     @RequestMapping(value = "/item?page={page}&limit={limit}", method = RequestMethod.GET)
     public String getPageCourses(@RequestParam("user") String userid, @PathVariable int page, @PathVariable int limit){
-        ArrayList<String> courses = new ArrayList<>();
+        /*ArrayList<String> courses = new ArrayList<>();
         courses = courseService.findByPage(userid, page, limit);
         try{
         if(courses == null){
@@ -42,12 +76,14 @@ public class CourseController {
         }
         }catch (Exception e){
             return turnBackUtil.formIt(CODE.FAILURE, "失败,请联系管理员", null);
-        }
+        }*/
+        String[] courses = {s1,s2,s3,s4,s5,s5,s6,s7,s8,s9,s10};
+        return turnBackUtil.formIt(CODE.SUCCESS, "SUCCESS", courses);
     }
 
     @RequestMapping(value = "/nessinfo?id={id}", method = RequestMethod.GET)
     public String getNessInfo(@RequestParam("user") String userid, @PathVariable String id){
-       Course course = courseMapper.selectByPrimaryKey(id);
+       /*Course course = courseMapper.selectByPrimaryKey(id);
         try{
         if(course != null){
             return turnBackUtil.formIt(CODE.SUCCESS
@@ -57,12 +93,13 @@ public class CourseController {
             return turnBackUtil.formIt(CODE.CREATED, "查询成功，数据为空",null);
         }catch(Exception e){
             return turnBackUtil.formIt(CODE.FAILURE, "查询失败", null);
-        }
+        }*/
+       return turnBackUtil.formIt(CODE.SUCCESS, "success", s1);
     }
 
     @RequestMapping(value = "/info?id={id}", method = RequestMethod.GET)
     public String getDetailInfo(@PathVariable String id){
-        Course course = courseMapper.selectByPrimaryKey(id);
+       /* Course course = courseMapper.selectByPrimaryKey(id);
         try{
             if(course != null){
                 return turnBackUtil.formIt(CODE.SUCCESS
@@ -72,12 +109,13 @@ public class CourseController {
                 return turnBackUtil.formIt(CODE.CREATED, "查询成功，数据为空",null);
         }catch(Exception e){
             return turnBackUtil.formIt(CODE.FAILURE, "查询失败", null);
-        }
+        }*/
+       return turnBackUtil.formIt(CODE.SUCCESS,"success", s2);
     }
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
     public String addCourse(@RequestParam("course") String courseStr){
-        Course course = JSONObject.parseObject(courseStr,Course.class);
+        /*Course course = JSONObject.parseObject(courseStr,Course.class);
         try{
             String id = course.getCourseid();
             String code = course.getCode();
@@ -110,7 +148,13 @@ public class CourseController {
             }
         }catch (Exception e){
             return turnBackUtil.formIt(CODE.FAILURE, "创建失败", null);
-        }
-
+        }*/
+        return turnBackUtil.formIt(CODE.SUCCESS, "success", JSON.toJSONString(courseStr));
     }
+
+    @RequestMapping(value = "/save", method = RequestMethod.POST)
+    public String save(@RequestParam("courseid") String courseidStr){
+        return turnBackUtil.formIt(CODE.SUCCESS, "success", courseidStr);
+    }
+
 }

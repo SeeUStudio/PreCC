@@ -21,6 +21,7 @@ public class NormalQueryInterceptor extends HandlerInterceptorAdapter {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handle) throws IOException {
         response.setCharacterEncoding("UTF-8");
         response.setHeader("Content-Type", "text/json;charset=UTF-8");//这句话是解决乱码的
+        request.setAttribute("userid","xa563278");
         return true;
     }
 
