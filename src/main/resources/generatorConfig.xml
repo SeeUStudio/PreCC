@@ -3,7 +3,7 @@
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 <generatorConfiguration>
     <context id="MyBatisDemo">
-        <jdbcConnection connectionURL="jdbc:mysql://localhost:3306/lessons"
+        <jdbcConnection connectionURL="jdbc:mysql://localhost:3306/precc"
                         driverClass="com.mysql.jdbc.Driver" password="Snow6413." userId="root"/>
         <javaModelGenerator targetPackage="com.seeu.user.model" targetProject="src/main/java"/>
         <!--<sqlMapGenerator targetPackage="com.seeu.logintokeneeudb.mapper" targetProject="src/main/java"/>-->
@@ -11,12 +11,22 @@
 
 
 
-        <table schema="lessons" tableName="lessons" domainObjectName="Course"
+        <table schema="precc" tableName="generalcourseinformation" domainObjectName="GeneralCourse"
                enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
                enableSelectByExample="false" selectByExampleQueryId="false">
             <property name="useActualColumnNames" value="true"/>
         </table>
-        <table schema="lessons" tableName="users" domainObjectName="User"
+        <table schema="precc" tableName="usercourseinformation" domainObjectName="UserCourse"
+               enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false" selectByExampleQueryId="false">
+            <property name="useActualColumnNames" value="true"/>
+        </table>
+        <table schema="precc" tableName="chosencourses" domainObjectName="Classtimetable"
+               enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false" selectByExampleQueryId="false">
+            <property name="useActualColumnNames" value="true"/>
+        </table>
+        <table schema="precc" tableName="userinformation" domainObjectName="User"
                enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
                enableSelectByExample="false" selectByExampleQueryId="false">
             <property name="useActualColumnNames" value="true"/>

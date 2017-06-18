@@ -1,17 +1,11 @@
-package com.seeu.coursesystem.controller;
+package com.seeu.mainsystem.controller;
 
 import com.CODE;
 import com.TurnBackUtil;
 import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
-import com.seeu.user.dao.*;
 import com.seeu.user.model.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import com.seeu.user.dao.UserMapper;
-
-import java.util.ArrayList;
-import java.util.regex.Pattern;
 
 /**
  * Created by thinkpad on 2017/6/13 0013.
