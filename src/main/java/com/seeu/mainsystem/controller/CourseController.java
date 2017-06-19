@@ -16,36 +16,36 @@ public class CourseController {
     @Autowired
     TurnBackUtil turnBackUtil;
 
-    GeneralCourse c1 = new GeneralCourse("123", "CS101", "3-1-2",
-            "LAOLUO", "LIYUAN", 100, 120,1,
-            "1,3,5,7,9" , "4-1-2", "",3);
-    GeneralCourse c2 = new GeneralCourse("124", "CS102", "3-3-4",
-            "wangqi", "LIYUAN", 100, 120,2,
-            "1,3,5,7,9" , "4-3-4","",2);
-    GeneralCourse c3 = new GeneralCourse("125", "CS104", "5-1-2",
-            "LAOLUO", "LIYUAN", 100, 120,3,
-            "1,3,5,7,9" , "1-1-2", "",2);
-    GeneralCourse c4 = new GeneralCourse("126", "CS201", "5-1-2",
-            "LAOLUO", "LIYUAN", 100, 120,4,
-            "1,3,5,7,9" , "1-1-2","",3);
-    GeneralCourse c5 = new GeneralCourse("202", "CS202", "5-1-2",
-            "LAOLUO", "LIYUAN", 100, 120,5,
-            "2,4,6,8,10" , "1-1-2", "",4);
-    GeneralCourse c6 = new GeneralCourse("203", "CS203", "3-3-4",
-            "LAOLUO", "LIYUAN", 100, 120,6,
-            "2,4,6,8,10" , "4-3-4", "",3);
-    GeneralCourse c7 = new GeneralCourse("204", "CS204", "3-3-4",
-            "LAOLUO", "LIYUAN", 100, 120,7,
-            "2,4,6,8,10,12,14" , "4-3-4", "",4);
-    GeneralCourse c8 = new GeneralCourse("205", "CS205", "2-5-6",
-            "LAOLUO", "LIYUAN", 100, 120,7,
-            "1,3,5,7,9" , "1-5-6", "",3);
-    GeneralCourse c9 = new GeneralCourse("206", "CS206", "5-1-2",
-            "LAOLUO", "LIYUAN", 100, 120,7,
-            "1,3,5,7,9" , "1-5-6", "",3);
-    GeneralCourse c10 = new GeneralCourse("301", "CS301", "5-1-2",
-            "LAOLUO", "LIYUAN", 100, 120,7,
-            "1,3,5,7,9,11" , "1-7-8", "",3);
+    GeneralCourse c1 = new GeneralCourse("123", "CS101", "计算机导论",
+    "wangqi", 3,"1,3,5,7,9","1-1-2","1-3-4",
+    "liyuan", 11, 100,"",1);
+    GeneralCourse c2 = new GeneralCourse("124", "CS101", "计算机导论",
+            "wangqi", 3,"1,3,5,7,9","2-1-2","1-5-6",
+            "liyuan", 11, 100,"",1);
+    GeneralCourse c3 = new GeneralCourse("125", "CS101", "计算机导论",
+            "wangqi", 3,"1,3,5,7,9","4-1-2","5-3-4",
+            "liyuan", 11, 100,"",1);
+    GeneralCourse c4 = new GeneralCourse("126", "CS101", "计算机导论",
+            "wangqi", 3,"1,3,5,7,9","1-1-2","3-7-8",
+            "liyuan", 11, 100,"",1);
+    GeneralCourse c5 = new GeneralCourse("127", "CS101", "计算机导论",
+            "wangqi", 3,"1,3,5,7,9","1-1-2","1-3-4",
+            "liyuan", 11, 100,"",1);
+    GeneralCourse c6 = new GeneralCourse("128", "CS101", "计算机导论",
+            "wangqi", 3,"1,3,5,7,9","1-9-10","2-5-6",
+            "liyuan", 11, 100,"",1);
+    GeneralCourse c7 = new GeneralCourse("129", "CS101", "计算机导论",
+            "wangqi", 3,"1,3,5,7,9","1-1-2","1-3-4",
+            "liyuan", 11, 100,"",1);
+    GeneralCourse c8 = new GeneralCourse("211", "CS101", "计算机导论",
+            "wangqi", 3,"1,3,5,7,9","1-1-2","1-3-4",
+            "liyuan", 11, 100,"",1);
+    GeneralCourse c9 = new GeneralCourse("212", "CS101", "计算机导论",
+            "wangqi", 3,"1,3,5,7,9","1-1-2","1-3-4",
+            "liyuan", 11, 100,"",1);
+    GeneralCourse c10 = new GeneralCourse("213", "CS101", "计算机导论",
+            "wangqi", 3,"1,3,5,7,9","1-1-2","1-3-4",
+            "liyuan", 11, 100,"",1);
     String s1 = JSON.toJSONString(c1);
     String s2 = JSON.toJSONString(c2);
     String s3 = JSON.toJSONString(c3);
